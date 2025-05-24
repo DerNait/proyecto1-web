@@ -5,7 +5,7 @@ function CalculatorScreen() {
 
     return (
         <>
-            <div className="calculator-screen">
+            <div className="calculator-screen mb-3">
                 <p>
                     {input}
                 </p>

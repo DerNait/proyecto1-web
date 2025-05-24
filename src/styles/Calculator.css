@@ -1,19 +1,27 @@
 .calculator {
-    width: 576px;
-    height: 700px;
+    width: 476px;
+    height: 750px;
     background-color: rgb(116, 116, 116);
     border-radius: 20px;
+    border: none;
+    border-bottom: 10px solid rgb(79, 79, 79);
+    border-right: 10px solid rgb(79, 79, 79);
+    background-image: 
+        linear-gradient(rgba(71, 71, 71, 0.5), rgba(71, 71, 71, 0.5)), 
+        url('https://cdn.architextures.org/textures/23/6/stainless-steel-none-g8nd1f.jpg');
 }
 
 .calculator-screen {
     width: 80%;
     height: 75px;
-    background-color: rgb(138, 175, 126);
+    background-color: #8aaf7e;
     border-radius: 20px;
     display: flex;
     justify-content: end;
     align-items: center;
     margin-top: 6em;
+    box-shadow: inset 4px 4px 5px rgba(60, 60, 60, 0.607);
+    color: #405438;
 }
 
 .calculator-screen p {
@@ -27,27 +35,24 @@
    width: 80%; 
 }
 
-.calculator-special {
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    height: 75px;
-    font-size: 1.5rem;
-    background-color: rgb(81, 81, 81);
-    color: white;
-}
-
 .calculator-button {
     border: none;
+    border-right: 4px solid #3d3d3d;
+    border-bottom: 4px solid #3d3d3d;
     border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(48, 48, 48, 0.427);
     width: 100%;
     height: 75px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     background-color: rgb(165, 165, 165);
     color: white;
 }
 
+.calculator-special {
+    background-color: rgb(81, 81, 81);
+}
+
 .calculator-button:hover {
-    background-color: rgb(141, 141, 141);
+    background-color: rgb(122, 122, 122);
     transition: background-color 0.2s ease-in-out;
 }

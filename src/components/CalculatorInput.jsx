@@ -5,11 +5,11 @@ function CalculatorInput( {value} ) {
 
     const getInputClass = (value) => {
         if (isNaN(value) && value !== "+/-" && value !== ".") return "calculator-special"
-        return "calculator-button";
+        return "";
     }
     return (
         <>
-            <button className={getInputClass(value)} onClick={() => onButtonClick(value)}>
+            <button className={'calculator-button ' + getInputClass(value)} onClick={() => onButtonClick(value)}>
                 {value}
             </button>
         </>
