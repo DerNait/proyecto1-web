@@ -6,3 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.97), rgba(1, 0, 10, 0.97)),
+    url('https://wallpapers.com/images/featured/math-background-jbcyizvw0ckuvcro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
