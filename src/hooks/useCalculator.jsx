@@ -80,10 +80,25 @@ function CalculatorProvider ({ children }) {
         break
       default:
         if (input !== '') {
-          setResult(parseFloat(input))
+          if (operator && result != null) {
+            const currentInput = parseFloat(input)
+            const operationResult = operate(result, currentInput, operator)
+            const resultFormatted = displayInput(operationResult, maxInputs)
+
+            if (resultFormatted === 'ERROR') {
+              setResult(null)
+              setInput('ERROR')
+            } else {
+              setResult(operationResult)
+              setInput(resultFormatted)
+            }
+          } else {
+            setResult(parseFloat(input))
+          }
           setOperator(value)
           setReset(true)
         }
+        break
     }
   }
 
@@ -153,4 +168,4 @@ function CalculatorProvider ({ children }) {
 
 export default useCalculator
 export { CalculatorProvider }
-export { CalculatorContext } 
+export { CalculatorContext }

@@ -4,7 +4,7 @@ import CalculatorScreen from '@components/CalculatorScreen'
 export default {
   title: 'Calculator/Screen',
   component: CalculatorScreen,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 }
 
 const Template = (args) => <CalculatorScreen {...args} />

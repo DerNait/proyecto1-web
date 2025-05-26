@@ -7,7 +7,7 @@ export default {
   component: CalculatorGrid,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   decorators: [
     (Story) => (
