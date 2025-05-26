@@ -1,17 +1,17 @@
-import useCalculator from "@hooks/useCalculator";
+import useCalculator from '@hooks/useCalculator'
 
-function CalculatorScreen() {
-    const { input } = useCalculator();
+function CalculatorScreen () {
+  const { input } = useCalculator()
 
-    return (
-        <>
-            <div className="calculator-screen mb-3">
-                <p>
-                    {input}
-                </p>
-            </div>
-        </>
-    )
+  return (
+    <>
+      <div className='calculator-screen mb-3'>
+        <p data-testid='display'>
+          {input}
+        </p>
+      </div>
+    </>
+  )
 }
 
-export default CalculatorScreen;
+export default CalculatorScreen

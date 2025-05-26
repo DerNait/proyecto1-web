@@ -2,7 +2,7 @@ import Calculator from '@components/Calculator'
 import { CalculatorProvider } from '@hooks/useCalculator'
 import './App.css'
 
-function App() {
+function App () {
   return (
     <>
       <div className='vh-100 d-flex justify-content-center align-items-center'>

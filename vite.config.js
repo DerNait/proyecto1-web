@@ -12,10 +12,9 @@ export default defineConfig({
     alias: {
       '@assets': '/src/assets',
       '@components': '/src/components',
-      '@pages': '/src/pages',
-      '@router': '/src/router',
       '@styles': '/src/styles',
       '@hooks': '/src/hooks',
+      '@tests': '/src/tests'
     }
-  },
+  }
 })
