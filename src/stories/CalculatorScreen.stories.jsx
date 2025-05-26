@@ -7,18 +7,6 @@ export default {
   tags: ['autodocs'],
 }
 
-/* export const Empty = () => (
-  <CalculatorContext.Provider value={{ input: '', onButtonClick: () => {} }}>
-    <CalculatorScreen />
-  </CalculatorContext.Provider>
-) */
-
-/* export const WithValue = () => (
-  <CalculatorContext.Provider value={{ input: '123.45', onButtonClick: () => {} }}>
-    <CalculatorScreen />
-  </CalculatorContext.Provider>
-) */
-
 const Template = (args) => <CalculatorScreen {...args} />
 
 export const Empty = Template.bind({})

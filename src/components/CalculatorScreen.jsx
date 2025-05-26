@@ -1,5 +1,3 @@
-import useCalculator from '@hooks/useCalculator'
-
 function CalculatorScreen ({ input }) {
   return (
     <>
