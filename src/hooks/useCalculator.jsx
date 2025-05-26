@@ -153,3 +153,4 @@ function CalculatorProvider ({ children }) {
 
 export default useCalculator
 export { CalculatorProvider }
+export { CalculatorContext } 

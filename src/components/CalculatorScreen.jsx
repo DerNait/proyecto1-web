@@ -1,8 +1,6 @@
 import useCalculator from '@hooks/useCalculator'
 
-function CalculatorScreen () {
-  const { input } = useCalculator()
-
+function CalculatorScreen ({ input }) {
   return (
     <>
       <div className='calculator-screen mb-3'>
