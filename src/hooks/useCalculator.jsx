@@ -17,10 +17,11 @@ function CalculatorProvider({children}) {
     const onButtonClick = (value) => {
         if (!isNaN(value) || value === '.') {
             setInput((previous) => {
-                    const next = reset ? `${value}` : `${previous}${value}`;
-                    const fitted = displayInput(parseFloat(next), maxInputs);
+                    if (previous.length >= 9) {
+                        return reset ? `${value}` : `${previous}`;
+                    }
 
-                    return fitted === 'LENGTH ERROR' ? prev : next;
+                    return reset ? `${value}` : `${previous}${value}`;
                 }
             );
 
@@ -47,7 +48,16 @@ function CalculatorProvider({children}) {
                 setInput('');
                 break;
             case '+/-':
-                setInput(previous => previous.startsWith('-') ? previous.slice(1) : `-${previous}`);
+                setInput(previous => {
+                    if (previous === '' || previous === 'ERROR') {
+                        return previous;
+                    }
+
+                    const toggledSign = previous.startsWith('-') ? previous.slice(1) : `-${previous}`;
+
+                    return toggledSign.length > maxInputs ? 'ERROR' : toggledSign;
+                });
+
                 break;
             case '=':
                 if (operator && result != null) {
@@ -75,6 +85,10 @@ function CalculatorProvider({children}) {
             return String(value);
         }
 
+        if (value > 999999999) {
+            return 'ERROR';
+        }
+
         const sign = value < 0 ? '-' : '';
         const absolute = Math.abs(value);
 
@@ -90,7 +104,7 @@ function CalculatorProvider({children}) {
                 }
             }
 
-            return 'LENGTH ERROR';
+            return 'ERROR';
         }
 
         const remain = max - sign.length - noDecimal.length;
@@ -111,11 +125,11 @@ function CalculatorProvider({children}) {
                 return num1 + num2;
             case '-':
                 let res = num1 - num2
-                return res < 0 ? 'SIGN ERROR' : res;
-            case 'X':
+                return res < 0 ? 'ERROR' : res;
+            case '×':
                 return num1 * num2;
-            case '/':
-                return num2 !== 0 ? num1 / num2 : 'DIVISION ERROR';
+            case '÷':
+                return num2 !== 0 ? num1 / num2 : 'ERROR';
             case '%':
                 return num1 % num2;
             default:
