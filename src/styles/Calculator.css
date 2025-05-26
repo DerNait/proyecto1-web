@@ -51,6 +51,12 @@
 }
 
 .calculator-special {
+    background-color: #45027c;
+    border-right: 4px solid #1f0138;
+    border-bottom: 4px solid #1f0138;
+}
+
+.calculator-operator {
     background-color: #015f9d;
     border-right: 4px solid #013e66;
     border-bottom: 4px solid #013e66;
@@ -59,9 +65,15 @@
 .calculator-button:hover {
     background-color: rgb(122, 122, 122);
     transition: background-color 0.2s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.606);
+}
+
+.calculator-operator:hover {
+    background-color: rgb(1, 123, 204);
     box-shadow: 5px 5px 10px rgba(0, 200, 255, 0.606);
 }
 
 .calculator-special:hover {
-    background-color: rgb(1, 123, 204);
+    background-color: #6401b5;
+    box-shadow: 5px 5px 10px #8c00ff;
 }
